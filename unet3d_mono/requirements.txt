@@ -1,0 +1,26 @@
+# Core ML dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Computer vision
+opencv-python>=4.8.0
+Pillow>=9.5.0
+
+# Scientific computing
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Data handling
+PyYAML>=6.0
+pathlib2>=2.3.7
+
+# Logging and visualization
+tensorboard>=2.13.0
+matplotlib>=3.7.0
+
+# Development tools
+tqdm>=4.65.0
+
+# Apple Silicon optimization (MPS support)
+--extra-index-url https://download.pytorch.org/whl/cpu

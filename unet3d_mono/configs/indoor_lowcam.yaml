@@ -1,0 +1,26 @@
+# data
+dataset: tartanair_v2
+data_root: "data/tartanair-v2"
+
+# Élargissement dataset - support multi-envs et caméras basses
+envs: ["ArchVizTinyHouseDay", "ArchVizTinyHouseNight"]
+difficulties: ["easy", "hard"] 
+cameras: ["lcam_bottom", "lcam_front"]  # lcam_bottom pour vue basse
+
+modalities: ["image", "depth", "seg"]
+
+# sequences
+T: 5
+size: [240, 320]  # H, W (on resize dans le loader)
+seq_stride: 1  # frames consécutives
+
+# training
+epochs: 5  # Plus d'époques pour convergence
+bs: 4
+lr: 2.5e-4
+num_classes: 6  # adapte à ton mapping
+num_workers: 0  # IMPORTANT: le dataloader TartanAir parallélise déjà
+
+# logging / ckpt
+log_dir: "runs/indoor_lowcam"
+save_dir: "ckpts/indoor_lowcam"

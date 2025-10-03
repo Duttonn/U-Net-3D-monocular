@@ -188,6 +188,7 @@ weights/
 logs/
 tensorboard/
 runs/
+ckpts/
 
 # Weights & Biases
 wandb/
@@ -223,3 +224,12 @@ Thumbs.db
 *.bak
 *.swp
 *.swo
+
+# TartanAir specific
+unet3d_mono/data/
+unet3d_mono/runs/
+unet3d_mono/ckpts/
+
+# exports
+*.onnx
+*.engine
